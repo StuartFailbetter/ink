@@ -254,15 +254,15 @@ The reason that the variable name is passed in is so that you can have a single 
 
 ## Running functions
 
-You can run ink functions directly from C# using `EvaluationFunction`.
+You can run ink functions directly from C# using `EvaluateFunction`.
 
 You can pass the expected arguments for the ink function, if any.
 
-If the ink function has a return value, it will be returned by EvaluationFunction.
+If the ink function has a return value, it will be returned by EvaluateFunction.
 You do not need to Continue() over any text lines that may exist in the function; it runs to the end. Any content is written to the textOutput parameter, with a line break between each line.
 
 ```csharp
-var returnValue = _inkStory.EvaluationFunction("myFunctionName", out textOutput, params);
+var returnValue = _inkStory.EvaluateFunction("myFunctionName", out textOutput, params);
 ```
 
 ## External functions
